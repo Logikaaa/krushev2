@@ -8,7 +8,7 @@ client_socket.send(name.encode())
 print(client_socket.recv(1024).decode())
 
 command = input("Введи команду (NAME/EXIT): ")
-client_socket.send(command.encode())
+client_socket.send(command.upper().encode())
 print(client_socket.recv(1024).decode())
 
 client_socket.close()
